@@ -45,5 +45,7 @@ git diff se puede hacer comparacion con dos actualizaciones.
 //Volver a una funcion vieja
 git reset f68b6145c80be36e6ea75ce1602368a36bed0e58 --hard
 
+//
+git log --stat
 
-
+git checkout .......................
