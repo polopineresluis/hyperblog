@@ -1,0 +1,19 @@
+//abrir archivos en comando
+cat
+
+//historia de todos los comandos que he usado
+history
+
+//invocar los comandos 
+!
+
+//borrar archivo
+rm nombredelarchivo
+
+//informacion
+rm --help
+
+//limpiar la consola
+
+Ctrl + l
+
