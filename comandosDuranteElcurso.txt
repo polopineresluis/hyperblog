@@ -48,4 +48,21 @@ git reset f68b6145c80be36e6ea75ce1602368a36bed0e58 --hard
 //
 git log --stat
 
+//volver a una version
 git checkout .......................
+
+git flech
+git merge
+
+//o funciona los dos comandos anteriores por este:
+git pull
+
+//git commit y add
+git commit -am
+
+//crear rama
+git branch cabecera
+
+// cambiar de rama
+git checkeout cabecera
+
