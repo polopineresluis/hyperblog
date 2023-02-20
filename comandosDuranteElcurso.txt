@@ -17,3 +17,23 @@ rm --help
 
 Ctrl + l
 
+//sacar un archivo
+git rm --cached  nombredelarchivo
+
+//mandarlo al repositorio
+git commit -m "Este es el primer commit de este archivo"
+
+//configurar git
+git config
+git config --list
+git config --list --show-origin
+
+//nombre y correo
+git config user.name
+git config user.email
+
+// ver historia del archivo
+git  log nombredelarchivo
+
+
+//COMANDOS MAS AVANZADOS
