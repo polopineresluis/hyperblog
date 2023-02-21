@@ -238,4 +238,83 @@ git checkout experiment
 # Aplicamos rebase para traer los cambios de la rama que queremos 
 git rebase master
 
+//Git Stash: Guardar cambios en memoria y recuperarlos después
+git stash
+
+git stash save "mensaje identificador del elemento del stashed"
+
+Obtener elelmentos del stash
+git stash pop
+git stash pop stash@{<num_stash>}
+
+Para retomar los cambios de una posición específica del Stash puedes utilizar el comando:
+git stash apply stash@{<num_stash>}
+
+Listado de elementos en el stash
+
+git stash list
+
+Crear una rama con el stash
+git stash branch <nombre_de_la_rama>
+
+Si deseas crear una rama y aplicar un stash específico (obtenido desde git stash list) puedes utilizar el comando:
+
+git stash branch nombre_de_rama stash@{<num_stash>}
+
+Eliminar elementos del stash
+git stash drop
+git stash drop stash@{<num_stash>}
+git stash clear
+
+
+Consideraciones:
+El cambio más reciente (al crear un stash) SIEMPRE recibe el valor 0 y los que estaban antes aumentan su valor.
+Al crear un stash tomará los archivos que han sido modificados y eliminados. Para que tome un archivo creado es necesario agregarlo al Staging Area con git add [nombre_archivo] con la intención de que git tenga un seguimiento de ese archivo, o también utilizando el comando git stash -u (que guardará en el stash los archivos que no estén en el staging).
+Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
+Aporte creado por: David Behar.
+
+//Git Clean: limpiar tu proyecto de archivos no deseados
+$ git clean
+
+//Revisar que archivos no tienen seguimiento.
+$ git clean --dry-run
+
+//Eliminar los archivos listados de no seguimiento.
+$ git clean -f
+
+//Git cherry-pick: traer commits viejos al head de un branch
+
+El uso de git cherry-pick es sencillo y se puede ejecutar de la siguiente manera:
+
+git checkoutmaster
+git cherry-pick f
+
+Atención
+Cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia, usa cherry-pick con sabiduría. Si no sabes lo que estás haciendo, mejor evita emplear este comando.
+
+//Git Reset y Reflog: úsese en caso de emergencia
+
+Git guarda todos los cambios aunque decidas borrarlos, al borrar un cambio lo que estás haciendo sólo es actualizar la punta del branch, para gestionar éstas puntas existe un mecanismo llamado registros de referencia o reflogs…La gestión de estos cambios es mediante los hash’es de referencia (o ref) que son apuntadores a los commits…Los recoges registran cuándo se actualizaron las referencias de Git en el repositorio local (sólo en el local), por lo que si deseas ver cómo has modificado la historia puedes utilizar el comando:
+
+git reflog
+git reset --HEAD@{6}
+git reset --hard 2bbe04d
+git checkout Puedes moverte sin realizar ningún cambio al commit exacto de la ref
+
+//Reconstruir commits en Git con amend
+git add -A # Para hacer uso de amend los archivos deben de estar en staging
+git commit --amend # Remendar último commit
+Atención
+Usar amend es una mala práctica, sobre todo cuando ya se ha hecho push o pull al repositorio remoto. Al momento de hacer amend con algún commit que esté en remoto, va a generar un conflicto que se va a arreglar haciendo un commit adicional y se perderá el beneficio del amend.
+
+//Buscar en archivos y commits de Git con Grep y log
+
+
+
+
+
+
+
+
+
 
