@@ -105,3 +105,18 @@ ssh-add ~/.ssh/id_rsa
 
 //cambiar la url para aplicar la ssh
 git remote set-url origin  git@github.com:polopineresluis/hyperblog.git
+
+//traerme del remote
+git pull
+git pull origin master
+
+//
+git log --all --graph --decorate --oneline
+
+//
+alias arbolito = "git log --all --graph --decorate --oneline"
+
+//tags
+git tag -a v0.1 -m "Resultado de las primeras clases del curso" a607462 
+git tag
+
