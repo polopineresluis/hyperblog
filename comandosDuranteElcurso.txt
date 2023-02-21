@@ -66,3 +66,23 @@ git branch cabecera
 // cambiar de rama
 git checkeout cabecera
 
+//funcionando ramas
+git merge cabecera
+
+
+//ahora podemos hacer el merge al reves para cabecera
+git merge master
+
+//agregar origin remot
+
+git remote add origin  https://github.com/polopineresluis/hyperblog.git
+
+git remote -v
+
+//enviar la rama master
+git push origin master
+
+
+
+
+
