@@ -82,7 +82,26 @@ git remote -v
 //enviar la rama master
 git push origin master
 
+//traer
+git pull origin master
+
+//fucionar
+git pull origin master --allow-unrelated-histories
+
+git config -l
+
+//traer cambios del repositorio remoto
+git pull origin master
 
 
+//GENERANDO LLAVES PUBLICAS
+ssh-keygen -t rsa -b 4096 -C "polopineresluisfernando@gmail.com"
 
+//ver si esta corriento en windows las llaves ssh
+eval $(ssh-agent  -s)
 
+//agregar la llave que se creo
+ssh-add ~/.ssh/id_rsa
+
+//cambiar la url para aplicar la ssh
+git remote set-url origin  git@github.com:polopineresluis/hyperblog.git
